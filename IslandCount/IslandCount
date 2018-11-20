@@ -1,0 +1,30 @@
+function countIslands (mapStr) {
+  // Write your code here, and
+  // return your final answer.
+}
+
+let testString1 = `
+.0...\n
+.00..\n
+....0
+`
+
+let testString2 = `
+..000.\n
+..000.\n
+..000.\n
+.0....\n
+..000.
+`
+let testString3 = `
+..000.\n
+..0...\n
+..0.0.\n
+..0...\n
+..000.\n
+`
+let testString4 = `
+0...0\n
+..0..\n
+0...0
+`
