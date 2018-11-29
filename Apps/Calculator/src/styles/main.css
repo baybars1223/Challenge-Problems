@@ -1,0 +1,63 @@
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-color: pink;
+}
+
+code {
+  /* background-color: rgba(0,0,0,1); */
+  color: rgb(255,255,255);
+  padding: 5px, 15px, 5px, 5px;
+  /* text-align: right; */
+}
+
+.numbers-container {
+  display: inline-grid;
+  background-color: green;
+  height: 100%;
+  width: 50%;
+  grid-template-columns: 1fr 1fr 1fr
+}
+
+.button-container {
+  display: inline-grid;
+  background-color: blue;
+  height: 100%;
+  width: 50%;
+  grid-template-rows: 1fr 1fr 1fr
+}
+
+.calc-button {
+  border: 1px double black;
+  text-align: center;
+}
+.display-container {
+    background-color: rgba(0,0,0,1);
+    text-align: right;
+}
+
+.done {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+input {
+  margin-right: 5px;
+}
