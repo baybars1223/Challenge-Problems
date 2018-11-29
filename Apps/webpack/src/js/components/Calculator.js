@@ -147,17 +147,6 @@ export default class Calculator extends React.Component {
     return (
     	<div>
         <Display outputValue={this.state.displayValue}/>
-        <div className='numbers-container'>
-          {this.state.numbers.map((element, i) => {
-          	return (
-            	<CalculatorButton
-                name={element}
-                key={i}
-                clickFunction={this.handleValue}
-              />
-            )
-          })}
-        </div>
         <div className='button-container'>
           {this.state.operators.map((e, i) => {
           	return (
@@ -165,6 +154,17 @@ export default class Calculator extends React.Component {
                 name={e}
                 key={i}
                 clickFunction={this.handleOperator}
+              />
+            )
+          })}
+        </div>
+        <div className='numbers-container'>
+          {this.state.numbers.map((element, i) => {
+          	return (
+            	<CalculatorButton
+                name={element}
+                key={i}
+                clickFunction={this.handleValue}
               />
             )
           })}

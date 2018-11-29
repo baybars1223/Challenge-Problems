@@ -12,14 +12,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
         exclude: /node_modules|packages/,
         test: /\.js$/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader']
+      }
     ],
   },
   plugins: [new HtmlWebpackPlugin(), new webpack.NamedModulesPlugin()],

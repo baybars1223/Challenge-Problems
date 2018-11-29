@@ -41,16 +41,18 @@ code {
   background-color: blue;
   height: 100%;
   width: 50%;
+  grid-template-columns: 2fr;
   grid-template-rows: 1fr 1fr 1fr
 }
 
 .calc-button {
+  display: grid;
   border: 1px double black;
   text-align: center;
 }
 .display-container {
-    background-color: rgba(0,0,0,1);
-    text-align: right;
+  background-color: rgba(0,0,0,1);
+  text-align: right;
 }
 
 .done {
