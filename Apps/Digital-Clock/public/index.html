@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href = "main.css">
+  <title>Digital Clock</title>
+</head>
+
+<body>
+  <script src="https://unpkg.com/mithril/mithril.js"></script>
+  <script>
+    const root = document.body
+    const c = {
+        seconds: 0,
+        minutes: 0,
+        hours: 0 
+    }
+    let offset = "+00";
+    const clockTick = () => {
+      const newDate = new Date();
+      c.seconds = newDate.getSeconds().toString().padStart(2, '0');
+      c.minutes = newDate.getMinutes().toString().padStart(2, '0');
+      c.hours = newDate.getHours().toString().padStart(2, '0');
+      setTimeout(() => {
+        clockTick();
+      }, 500)
+      m.redraw();
+    }
+    const Clock = {
+      oninit: () => {
+        const initDate = new Date();
+        let initOffset = initDate.getTimezoneOffset();
+        if (initOffset >= 0) {
+          offset = `-${(initOffset/60).toString().padStart(2, '0')}`
+        } else {
+          offset = `+${(initOffset/60).toString().padStart(2, '0')}`
+        }
+        clockTick();
+      },
+      view: function () {
+        return m("main", {class: "time"}, [
+          m("h1", {class: "title"}, `My Digital Clock - UTC${offset}`), 
+          m("div", {class: "clockContainer"}, [
+            m("div", {class: "clockField"}, `${c.hours}`),
+            m("div", {class: "clockFieldSeparator"}, `:`),
+            m("div", {class: "clockField"}, `${c.minutes}`),
+            m("div", {class: "clockFieldSeparator"}, `:`),
+            m("div", {class: "clockField"}, `${c.seconds}`)
+          ])
+        ])
+      }
+    }
+    const Splash = {
+      view: function() {
+        return m("main", [
+          m("a", {href: "#!/clock"}, "Enter!")
+        ])
+      }
+    }
+    m.route(root, "/splash", {
+      "/splash": Splash,
+      "/clock": Clock
+    });
+  </script>
+</body>
+
+</html>

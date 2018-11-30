@@ -1,0 +1,46 @@
+body {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.time {
+  font-family: 'Orbitron', sans-serif;
+  color: hsl(123, 57%, 41%);
+  height: 400px;
+}
+
+.title {
+  margin: 5px;
+  padding: 25px 25px 15px 15%;
+  width: auto;
+  font-size: 35px;
+}
+
+.clockContainer {
+  margin: 5px;
+  padding: 15px 25% 25px 15%;
+  width: auto;
+  display: grid;
+  font-family: 'Orbitron', sans-serif;
+  color: hsl(123, 57%, 41%);
+  grid-template-columns: 1fr .5fr 1fr .5fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 80px;
+}
+
+.clockField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 100px;
+  background-color: hsl(0, 0%, 15%);
+  border: 5px inset hsl(0, 0%, 12%);
+}
+.clockFieldSeparator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 100px;
+  text-align: center;
+}
