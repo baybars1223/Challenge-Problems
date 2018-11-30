@@ -1,5 +1,7 @@
-# Digital Clock mini-app
+# Title
+  
+## Digital Clock mini-app
 
 ## Description
 
-Digital Clock using Mithril.js
+  Digital Clock using Mithril.js
