@@ -21,46 +21,15 @@ h1 {
   background-color: pink;
 }
 
-code {
-  /* background-color: rgba(0,0,0,1); */
-  color: rgb(255,255,255);
-  padding: 5px, 15px, 5px, 5px;
-  /* text-align: right; */
-}
-
-.numbers-container {
-  display: inline-grid;
-  background-color: green;
-  height: 100%;
-  width: 50%;
-  grid-template-columns: 1fr 1fr 1fr
-}
-
-.button-container {
-  display: inline-grid;
-  background-color: blue;
-  height: 100%;
-  width: 50%;
-  grid-template-rows: 1fr 1fr 1fr
-}
-
 .calc-button {
   border: 1px double black;
   text-align: center;
   cursor: pointer;
 }
+
 .display-container {
     background-color: rgba(0,0,0,1);
     text-align: right;
-}
-
-.done {
-  color: rgba(0, 0, 0, 0.3);
-  text-decoration: line-through;
-}
-
-input {
-  margin-right: 5px;
 }
 
 .calculator {
@@ -84,20 +53,22 @@ input {
   text-align: center;
 }
 
-.operators {
+.operators-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
   grid-column: 1;
   grid-row: 3 / 6;
+  background-color: blue;
 }
 
-.numbers {
+.numbers-container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
   grid-column: 2;
   grid-row: 3 / 6;
+  background-color: green;
 }

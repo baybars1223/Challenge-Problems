@@ -12,7 +12,7 @@ export default class Calculator extends React.Component {
     	<div class="calculator">
         <div class="history">History</div>
         <div class="value">Current Value</div>
-        <div class="operators">
+        <div class="operators-container">
           <button class="calc-button">+</button>
           <button class="calc-button">-</button>
           <button class="calc-button">x</button>
@@ -22,7 +22,7 @@ export default class Calculator extends React.Component {
           <button class="calc-button">=</button>
           <button class="calc-button">C</button>
         </div>
-        <div class="numbers">
+        <div class="numbers-container">
           <button class="calc-button">1</button>
           <button class="calc-button">2</button>
           <button class="calc-button">3</button>
@@ -31,10 +31,10 @@ export default class Calculator extends React.Component {
           <button class="calc-button">6</button>
           <button class="calc-button">7</button>
           <button class="calc-button">8</button>
-          <button class="calc-button">9</button>
-          <button class="calc-button">(-)</button>
+          <button class="calc-button">9</button>          
           <button class="calc-button">.</button>
           <button class="calc-button">0</button>
+          <button class="calc-button">(-)</button>
         </div>
       </div>
     )
