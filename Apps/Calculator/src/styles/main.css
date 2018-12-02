@@ -47,6 +47,7 @@ code {
 .calc-button {
   border: 1px double black;
   text-align: center;
+  cursor: pointer;
 }
 .display-container {
     background-color: rgba(0,0,0,1);
@@ -60,4 +61,43 @@ code {
 
 input {
   margin-right: 5px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.history {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  border: 1px double black;
+  text-align: center;
+}
+
+.value { 
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border: 1px double black;
+  text-align: center;
+}
+
+.operators {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-column: 1;
+  grid-row: 3 / 6;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-column: 2;
+  grid-row: 3 / 6;
 }

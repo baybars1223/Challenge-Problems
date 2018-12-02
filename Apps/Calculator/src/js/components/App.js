@@ -5,11 +5,10 @@ import Calculator from './Calculator'
 
 
 const App = () => (
-  <h1>
-    Hello, world.<br />
-    <Counter />
+  <div>
+    <h1>This is App level</h1>
     <Calculator />
-  </h1>
+  </div>
 )
 
 export default hot(module)(App)
