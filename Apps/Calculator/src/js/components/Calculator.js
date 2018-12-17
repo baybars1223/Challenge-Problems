@@ -10,7 +10,10 @@ export default class Calculator extends React.Component {
   render() {
     return (
     	<div class="calculator">
-        <div class="history">History</div>
+        <div class="history">
+          <div>Past History</div>
+          <div>Current History</div>
+        </div>
         <div class="value">Current Value</div>
         <div class="operators-container">
           <button class="calc-button">+</button>
